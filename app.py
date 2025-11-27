@@ -315,4 +315,4 @@ if __name__ == '__main__':
     Timer(1.5, open_browser).start()
 
     print("🚀 Server started with Scheduler (Every Saturday 9:00 AM)")
-    app.run(debug=True, port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)

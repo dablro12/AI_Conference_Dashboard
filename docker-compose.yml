@@ -1,0 +1,15 @@
+version: '3.10'
+
+services:
+  web:
+    build: .
+    container_name: conference-deadlines
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./conferences_data.json:/app/conferences_data.json
+      - ./update_log.json:/app/update_log.json
+    environment:
+      - FLASK_ENV=development
+    restart: unless-stopped
+
